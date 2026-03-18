@@ -1,0 +1,35 @@
+# Default configuration for AI Photo Deduplicator
+
+# Similarity threshold (0-100)
+# Higher value = more strict matching
+threshold: 90
+
+# Directory for deleted files
+trash_dir: ./trash
+
+# Directories to exclude from scanning
+exclude_dirs:
+  - .git
+  - __pycache__
+  - .DS_Store
+  - trash
+  - node_modules
+
+# Supported image formats
+image_formats:
+  - .jpg
+  - .jpeg
+  - .png
+  - .webp
+  - .bmp
+  - .gif
+
+# Keep strategy when cleaning duplicates
+# Options: first, best (highest resolution), newest
+keep_strategy: first
+
+# Number of parallel workers for hashing
+max_workers: 8
+
+# Hash size for perceptual hashing (larger = more precise)
+hash_size: 8
